@@ -1,0 +1,1 @@
+include ':app', ':testmaven', ':testremotemaven', ':testupload2jcenter'
