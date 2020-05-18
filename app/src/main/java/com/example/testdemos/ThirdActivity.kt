@@ -1,5 +1,7 @@
 package com.example.testdemos
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -31,8 +33,9 @@ class ThirdActivity : AppCompatActivity() {
 
         btn = findViewById(R.id.btn)
         btn.setOnClickListener {
-            onTestClick()
+//            onTestClick()
 //            test()
+            testDeepLink()
         }
 
         var a: String? = null
@@ -48,6 +51,16 @@ class ThirdActivity : AppCompatActivity() {
             val threadFactory = Executors.defaultThreadFactory()
             threadFactory.toString()
         }
+    }
+
+    private fun testDeepLink() {
+        val url = "novel://quyuansu.com:/main"
+        val intent = Intent()
+        intent.action = "android.intent.action.VIEW"
+        val uri = Uri.parse(url)
+        intent.data = uri
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
     }
 
     private fun test() {
