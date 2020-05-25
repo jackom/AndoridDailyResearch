@@ -46,18 +46,18 @@ class ThirdActivity : AppCompatActivity() {
 
         println("onCreate----$a")
 
-        for (i in 0 until 20) {
-            val threadFactory = Executors.defaultThreadFactory()
-            threadFactory.toString()
-        }
+//        for (i in 0 until 20) {
+//            val threadFactory = Executors.defaultThreadFactory()
+//            threadFactory.toString()
+//        }
 
         testStringFormat()
     }
 
     private fun testStringFormat() {
         val appName: String = resources.getString(R.string.app_name)
-        val str = String.format(resources.getString(R.string.txt_user_trust_content), appName)
-        print("字符串format测试： $str")
+        val str = String.format(resources.getString(R.string.txt_user_trust_content), "")
+        println("字符串format测试： \n$str")
     }
 
     private fun testDeepLink() {
