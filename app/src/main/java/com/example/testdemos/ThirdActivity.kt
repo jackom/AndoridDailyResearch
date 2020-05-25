@@ -56,7 +56,7 @@ class ThirdActivity : AppCompatActivity() {
 
     private fun testStringFormat() {
         val appName: String = resources.getString(R.string.app_name)
-        val str = String.format(resources.getString(R.string.txt_user_trust_content), "")
+        val str = String.format(resources.getString(R.string.txt_user_trust_content), null)
         println("字符串format测试： \n$str")
     }
 
