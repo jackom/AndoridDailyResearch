@@ -3,7 +3,6 @@ package com.example.testdemos
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.*
@@ -35,7 +34,7 @@ class ThirdActivity : AppCompatActivity() {
         btn.setOnClickListener {
 //            onTestClick()
 //            test()
-            testDeepLink()
+//            testDeepLink()
         }
 
         var a: String? = null
@@ -51,6 +50,14 @@ class ThirdActivity : AppCompatActivity() {
             val threadFactory = Executors.defaultThreadFactory()
             threadFactory.toString()
         }
+
+        testStringFormat()
+    }
+
+    private fun testStringFormat() {
+        val appName: String = resources.getString(R.string.app_name)
+        val str = String.format(resources.getString(R.string.txt_user_trust_content), appName)
+        print("字符串format测试： $str")
     }
 
     private fun testDeepLink() {
