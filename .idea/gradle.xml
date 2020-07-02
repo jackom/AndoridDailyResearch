@@ -12,9 +12,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/testmaven" />
-            <option value="$PROJECT_DIR$/testremotemaven" />
-            <option value="$PROJECT_DIR$/testupload2jcenter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

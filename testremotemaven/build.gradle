@@ -6,9 +6,9 @@ uploadArchives {
     configuration = configurations.archives
     repositories {
         mavenDeployer {
-            // 仓库路径（只能是hosted仓库）
+            // 仓库路径（只能是hosted仓库）注释掉，防止编译不过
             repository(url: 'http://localhost:8081/repository/TestMaven/') {
-                // 你 Nexus 的账户密码
+                 你 Nexus 的账户密码
                 authentication(userName: 'admin', password: 'admin123')
             }
             pom.project {
@@ -48,8 +48,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

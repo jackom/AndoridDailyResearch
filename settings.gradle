@@ -1,1 +1,4 @@
-include ':app', ':testmaven', ':testremotemaven', ':testupload2jcenter'
+include ':app'
+//include ':testmaven'
+//include ':testremotemaven'
+//include ':testupload2jcenter'
