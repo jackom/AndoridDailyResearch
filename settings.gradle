@@ -1,3 +1,5 @@
+include ':buildsrc'
+include ':groovylibtest'
 include ':app'
 //include ':testmaven'
 //include ':testremotemaven'
