@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.android.tools.build:gradle:4.0.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //https://stackoverflow.com/questions/61066014/ionic-capacitor-app-give-me-lots-of-errors?r=SearchResults&s=1|210.7841
         classpath 'com.novoda:bintray-release:0.9.1'  // 新增
