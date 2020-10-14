@@ -1,3 +1,4 @@
+include ':resolvedependencies'
 include ':buildsrc'
 include ':groovylibtest'
 include ':app'

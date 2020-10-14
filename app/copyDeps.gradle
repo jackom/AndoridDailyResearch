@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'exclude_plugin'
+
+android.applicationVariants.all { variant ->
+    task "copyDependencies${variant.name.capitalize()}"() {
+        outputs.upToDateWhen { false }
+        doLast {
+            println "Executing copyDependencies${variant.name.capitalize()}"
+
+
+
+            Configuration configuration
+            try {
+                // 3.x
+                configuration = project.configurations."${variant.name}CompileClasspath"
+            } catch (Exception e) {
+                // 2.x
+                configuration = project.configurations."_${variant.name}Compile"
+            }
+            configuration.resolvedConfiguration.lenientConfiguration.allModuleDependencies.each {
+                def identifier = it.module.id
+                println("${identifier.group}:${identifier.name}:${identifier.version}")
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            variant.getCompileClasspath().each { fileDependency ->
+                def sourcePath = fileDependency.absolutePath
+                def destinationPath = project.projectDir.path + "/build/dependencies/${variant.name}/"
+                println "Copying dependency:"
+                println sourcePath
+
+                //The monstrous regex that gets the name of the lib from it’s exploded .aar path
+                def dependencyName
+                if (sourcePath.contains("classes.jar")) {
+                    def dependencyNameRegexResult = (sourcePath =~ /.*[\/\\](.*)\.aar[\/\\].*[\/\\]jars[\/\\]classes\.jar/)
+                    println "dependencyNameRegexResult"
+                    println dependencyNameRegexResult
+
+                    if (dependencyNameRegexResult.size() > 0) {
+                        dependencyName = dependencyNameRegexResult[0][1]
+                        println "Exploded AAR found : ${dependencyName}"
+                    }
+                }
+
+                copy {
+                    from sourcePath
+                    into destinationPath
+
+                    rename { String filename ->
+                        if (filename.contains("classes.jar") && dependencyName != null) {
+                            dependencyName = "${dependencyName}.jar"
+                            println "Renaming dependency file to : ${dependencyName}"
+                            return dependencyName
+                        }
+                        return filename
+                    }
+                }
+            }
+
+//            excludePluginExt {
+//                autoDependencies = true //是否自动依赖即是否依赖过滤之后的架包
+//                println("excludePluginExt...")
+//                aars {
+//                    GDTSDK_unionNormal { //过滤架包的名称
+//                        path "/libs/exclude/ade_sdk_v3.2.9.aar" //架包的路径
+//                        excludePackages "com.qq.e" //过滤的包名
+//                    }
+//                }
+//            }
+
+        }
+
+    }
+
+
+    /**
+     * 解压getDefaultJar()返回的jar文件
+     */
+//    task unZipJars(type: Copy) {
+//        def zipFile = project.projectDir.path + "/build/dependencies/${variant.name}/"
+//        def outputDir = zipFile + "/zipFiles"
+//        from zipTree(zipFile)
+//        into outputDir
+//        mustRunAfter "copyDependencies${variant.name.capitalize()}"
+//    }
+
+
+
+
+}

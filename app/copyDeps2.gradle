@@ -1,0 +1,20 @@
+apply plugin: 'com.android.application'
+
+
+android.applicationVariants.all { variant ->
+    task "copyDeps2${variant.name.capitalize()}"() {
+        outputs.upToDateWhen { false }
+        doLast {
+            mkdir 'depsLibs'
+            variant.getCompileConfiguration().getResolvedConfiguration().getResolvedArtifacts().each{ artifact ->
+                def id = artifact.moduleVersion.id
+                def targetName = "${id.group}${id.name}${id.version}.${artifact.type}"
+                copy{
+                    from artifact.file
+                    into 'depsLibs'
+                    rename('(.*)',targetName)
+                }
+            }
+        }
+    }
+}
