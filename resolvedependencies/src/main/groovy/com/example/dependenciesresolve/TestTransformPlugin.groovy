@@ -20,6 +20,6 @@ class TestTransformPlugin implements Plugin<Project> {
         // AndroidConfig extension = variantScope.getGlobalScope().getExtension();
         // 它获取到了 android 扩展，然后拿到了其中的所有 transform
         // 嗯，看来这个是针对 Android 构建的
-        ext.registerTransform(new TestTransform())
+        ext.registerTransform(new TestTransform(project))
     }
 }
