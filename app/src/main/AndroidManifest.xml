@@ -12,8 +12,6 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-        </activity>
         <activity android:name=".lifecycledemo.SecondActivity" />
         <activity android:name=".ThirdActivity" >
             <intent-filter>
