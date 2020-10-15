@@ -10,8 +10,9 @@ secondPluginTest {
 }
 
 
-apply plugin: 'dependency_resolve'
-
+//apply plugin: 'dependency_resolve'
+//apply plugin: 'RuntimeDependenceSolve'
+apply plugin: 'dependency_transform'
 
 android {
     compileSdkVersion 29

@@ -8,7 +8,7 @@ class DependenciesResolvePlugin implements Plugin<Project> {
     @Override
     void apply(Project target) {
 
-        println "begin excecute..."
+        println "DependenciesResolvePlugin begin execute..."
     }
 
 }
