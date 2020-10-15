@@ -50,7 +50,7 @@ public class TestTransform extends Transform {
                     FileUtils.copyDirectory(directoryInput.file, dest)
                 } catch(Exception ex) {
                     ex.printStackTrace()
-                    println(e.getMessage());
+                    println(ex.getMessage());
                 }
             }
 
