@@ -1,16 +1,16 @@
 package com.example.testdemos
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
+import android.widget.FrameLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.domob.sdk.common.util.AdError
+import com.domob.sdk.unionads.splash.UnionSplashAD
+import com.domob.sdk.unionads.splash.UnionSplashAdListener
 import com.example.testdemos.lifecycledemo.MyObserver
 import com.example.testdemos.lifecycledemo.SecondActivity
-import com.example.testdemos.synchronizeddemo.Count
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.concurrent.Executors
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate---------$a------------------")
 
         lifecycle.addObserver(MyObserver())
-
     }
 
     override fun onPause() {

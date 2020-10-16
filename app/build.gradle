@@ -1,6 +1,10 @@
+import com.example.dependenciesresolve.DependenceTransformExtension
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+//配置protobuf插件
+apply plugin: 'com.google.protobuf'
 
 
 apply plugin: 'plugintest'
@@ -14,9 +18,21 @@ secondPluginTest {
 //apply plugin: 'RuntimeDependenceSolve'
 apply plugin: 'dependency_transform'
 
+apply plugin: 'exclude_plugin'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+
+    signingConfigs {
+        config {
+            keyAlias 'testdemo'
+            keyPassword '12345678'
+            storeFile file('testdemo.jks')
+            storePassword '12345678'
+        }
+    }
+
     defaultConfig {
         applicationId "com.example.testdemos"
         minSdkVersion 19
@@ -42,7 +58,125 @@ android {
             dirs file('libs')
         }
     }
+
+    packagingOptions {
+        exclude 'classes.dex'
+    }
+
+    buildTypes {
+        debug{
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.config
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    //程序在编译的时候会检查lint，有任何错误提示会停止build，我们可以关闭这个开关
+    lintOptions{
+        //false:即使报错也不会停止打包
+        abortOnError false
+        //false:打包release版本的时候进行检测
+        checkReleaseBuilds false
+    }
+
 }
+
+//配置protobuf
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.0.0'
+    }
+    plugins {
+        javalite {
+            artifact = 'com.google.protobuf:protoc-gen-javalite:3.0.0'
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.plugins {
+                javalite { }
+            }
+        }
+    }
+
+}
+
+
+task helloTask(dependsOn: ':app:build') {
+    doLast {
+        DependenceTransformExtension extension = project.getExtensions().findByType(DependenceTransformExtension.class)
+        println "helloTask DependenceTransform channels is: ${extension.getChannels()}"
+    }
+}
+
+//excludePluginExt {
+//    autoDependencies = true //是否自动依赖即是否依赖过滤之后的jar包
+//    aars {
+//        QYS_SDK_debug { //过滤jar包的名称
+//            path "/libs/exclude/qys_sdk_v3.1.8.aar" //jar包的路径
+//            excludePackages 'com.qq.e' //过滤的包名
+//        }
+//    }
+////    jars{
+////        BaiduLBS_Android_7_5_2{//过滤架包的名称
+////            path "/libs/exclude/BaiduLBS_Android_7.5.2.jar" //架包的路径
+////            excludePackages 'com.baidu.android','com.baidu.lbsapi' //过滤的包名
+////        }
+////
+////        map_baidu{//过滤架包的名称
+////            path "/libs/exclude/map-baidu.jar"//架包的路径
+////            excludePackages "io.dcloud.js.map.adapter"//过滤的包名
+////            excludeClasses "io.dcloud.js.map.IFMapDispose","io.dcloud.js.map.JsMapCircle","io.dcloud.js.map.MapJsUtil"//过滤的类名
+////        }
+////    }
+//}
+
+
+Task tmpTask = project.task('diyTask') {
+    doLast {
+        println "diy task run"
+        DependenceTransformExtension extension = project.getExtensions().findByType(DependenceTransformExtension.class)
+        println "diyTask extension.channels is: ${extension.getChannels()}"
+    }
+}
+
+
+project.tasks.whenTaskAdded { Task task ->
+    try {
+        if (task.name == "dexBuilderDependencyCheckDebug") {
+            task.doLast {
+                tmpTask.enabled = true
+//                tmpTask.dependsOn(task)
+            }
+        }
+    } catch(Exception ex) {
+        println "execute failed: ${ex.message}"
+        println ex.printStackTrace()
+    }
+}
+
+
+task hello1 {
+    leftShift {
+        println "test leftShift..."
+    }
+}
+
+
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -61,14 +195,14 @@ dependencies {
 
     /**多盟配置**/
     implementation files('libs/miit_mdid_1.0.10.aar')
-//    implementation(name: 'domob-ads-2.2.5', ext: 'aar')
+    implementation(name: 'domob-ads-2.2.5', ext: 'aar')
     implementation(name: 'GDTSDK.4.90.960', ext: 'aar')
     implementation(name: 'domob-unionads-1.1.3', ext: 'aar')
     //配置protobuf依赖
     implementation 'com.google.protobuf:protobuf-lite:3.0.1'
     /**多盟配置结束**/
 
-//    implementation files('libs/exclude/qys_sdk_v3.1.8.aar')
-    implementation(name: 'qys_sdk_v3.1.8', ext: 'aar')
+    implementation files('libs/exclude/qys_sdk_v3.1.8.aar')
+//    implementation(name: 'qys_sdk_v3.1.8', ext: 'aar')
 
 }

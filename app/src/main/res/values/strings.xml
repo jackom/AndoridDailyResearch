@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">TestDemos</string>
+    <string name="app_name">个人测试用</string>
     <string name="txt_user_trust_content">欢迎使用%1$s，我们将通过本平台《用户服务协议》、《隐私政策》、《儿童信息保护政策》帮助你了解我们收集，使用，存储和共享个人信息的情况，以及对你信息的保护措施，同时还可以了解到你所享有的权利。如你同意请点击下面的按钮，开始接受我们的服务。</string>
 </resources>

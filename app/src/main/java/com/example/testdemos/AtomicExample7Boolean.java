@@ -1,4 +1,4 @@
-package com.example.demotest;
+package com.example.testdemos;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

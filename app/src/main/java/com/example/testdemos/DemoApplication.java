@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 
 
+import com.bun.miitmdid.core.JLibrary;
 import com.example.testdemos.log.ILogInterceptor;
 import com.example.testdemos.log.LogUtils;
 
@@ -33,5 +34,8 @@ public class DemoApplication extends Application {
                 return null;
             }
         }));
+
+        //初始化移动安全联盟MSA
+        JLibrary.InitEntry(getBaseContext());
     }
 }

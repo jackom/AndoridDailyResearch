@@ -14,8 +14,11 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //https://stackoverflow.com/questions/61066014/ionic-capacitor-app-give-me-lots-of-errors?r=SearchResults&s=1|210.7841
         classpath 'com.novoda:bintray-release:0.9.1'  // 新增
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
 
         classpath 'com.example.dependencyresolve:resolvedependencies:1.0.0'  // 添加本地依赖仓库
+
+        classpath 'coder.siy:exclude-dependencies-plugin:1.0.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

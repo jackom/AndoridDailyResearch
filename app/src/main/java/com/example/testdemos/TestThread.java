@@ -31,7 +31,7 @@ public class TestThread {
     }
 
     private static void test() {
-        final com.example.demotest.Buf buf = new com.example.demotest.Buf();
+        final Buf buf = new Buf();
         ExecutorService es = Executors.newFixedThreadPool(11);
         ScheduledExecutorService printer = Executors.newScheduledThreadPool(1);
         printer.scheduleAtFixedRate(new Runnable() {
