@@ -1,4 +1,4 @@
-package com.example.demotest.designpattern.clone
+package com.example.testdemos.designpattern.clone
 
 /**
  * @date：2020-02-21 17:34

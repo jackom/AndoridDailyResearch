@@ -1,5 +1,7 @@
 package com.example.testdemos.designpattern.clone;
 
+import com.example.demotest.designpattern.clone.CloneTestBean;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

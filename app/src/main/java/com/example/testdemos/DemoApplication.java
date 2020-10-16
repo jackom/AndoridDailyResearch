@@ -1,10 +1,11 @@
-package com.example.demotest;
+package com.example.testdemos;
 
 import android.app.Application;
 import android.util.Log;
 
-import com.example.demotest.log.ILogInterceptor;
-import com.example.demotest.log.LogUtils;
+
+import com.example.testdemos.log.ILogInterceptor;
+import com.example.testdemos.log.LogUtils;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

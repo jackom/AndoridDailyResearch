@@ -1,8 +1,6 @@
-package com.example.demotest;
+package com.example.testdemos;
 
-import com.example.testupload2jcenter.TestUpload2Jcenter;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -20,7 +18,7 @@ public class TestThread {
 //        test();
 
         System.out.println();
-        new TestUpload2Jcenter().test();
+        test();
 
         testList();
     }
@@ -33,7 +31,7 @@ public class TestThread {
     }
 
     private static void test() {
-        final Buf buf = new Buf();
+        final com.example.demotest.Buf buf = new com.example.demotest.Buf();
         ExecutorService es = Executors.newFixedThreadPool(11);
         ScheduledExecutorService printer = Executors.newScheduledThreadPool(1);
         printer.scheduleAtFixedRate(new Runnable() {

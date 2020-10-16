@@ -11,7 +11,7 @@ public class Buf {
 
     private final int MAX = 5;
     private final ArrayList<Integer> list = new ArrayList<>();
-    synchronized void put(int v) throws InterruptedException {
+    public synchronized void put(int v) throws InterruptedException {
         while (list.size() == MAX) {
             wait();
         }
@@ -19,7 +19,7 @@ public class Buf {
         notify();
     }
 
-    synchronized int get() throws InterruptedException {
+    public synchronized int get() throws InterruptedException {
         // line 0
         while (list.size() == 0) {  // line 1
             wait();  // line2
@@ -30,7 +30,7 @@ public class Buf {
         return v;
     }
 
-    synchronized int size() {
+    public synchronized int size() {
         return list.size();
     }
 

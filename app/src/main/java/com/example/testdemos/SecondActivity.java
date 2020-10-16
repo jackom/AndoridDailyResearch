@@ -1,4 +1,4 @@
-package com.example.demotest;
+package com.example.testdemos;
 
 import android.app.Activity;
 import android.content.Context;
