@@ -4,9 +4,6 @@ import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
 import org.apache.commons.io.FileUtils
 import org.apache.commons.io.IOUtils
-import javassist.ClassPool
-import javassist.CtClass
-import javassist.CtMethod
 
 import java.util.jar.JarEntry
 import java.util.jar.JarFile
@@ -51,6 +48,12 @@ class TestTransform extends Transform {
         println("TestTransform transform begin...")
         def inputs = invocation.inputs
         def outputProvider = invocation.getOutputProvider()
+
+        //删除之前的输出
+        if (outputProvider != null) {
+            outputProvider.deleteAll()
+        }
+
         inputs.forEach { TransformInput input->
             input.directoryInputs.forEach { DirectoryInput directoryInput->
                 //往类中注入代码
@@ -147,9 +150,16 @@ class TestTransform extends Transform {
                                 tmpJarOutputStream.write(IOUtils.toByteArray(inputStream))
 
                             } else {
-//                                    println "begin execute login..."
-                                String needPkgName = entryName.replace("/", ".")
-                                channels.add(needPkgName)
+//                                println "com/qq/e... ${entryName}"
+//                                String needPkgName = entryName.replace("/", ".")
+                                if (!channels.contains("com.qq.e")) {
+                                    channels.add("com.qq.e")
+                                }
+
+//                                input.jarInputs.remove(jarInput)
+//                                InputStream inputStream = jarFile.getInputStream(jarEntry)
+//                                tmpJarOutputStream.putNextEntry(zipEntry)
+//                                tmpJarOutputStream.write(IOUtils.toByteArray(inputStream))
                             }
 
 
@@ -211,9 +221,11 @@ class TestTransform extends Transform {
                         File renameFile = new File(jarInput.file.parent + File.separator + jarInput.file.name)
                         tmpFile.renameTo(renameFile)
 
+                        println "renameFile.absolutePath is : ${renameFile.absolutePath}"
+
                         FileUtils.copyFile(renameFile, newDest)
                         tmpFile.delete()
-//                            tmpFile.delete()
+
                     } catch(Exception ex) {
                         ex.printStackTrace()
                         println(ex.getMessage())
@@ -236,23 +248,7 @@ class TestTransform extends Transform {
             }
             mExtension.setChannels(channels)
         }
+        println("TestTransform transform end...")
     }
 
-    private void scanFilesAndInsertCode(String path) throws Exception {
-        ClassPool classPool = ClassPool.getDefault()
-        classPool.appendClassPath(path)//将当前路径加入类池,不然找不到这个类
-        CtClass ctClass = classPool.getCtClass("com.example.testdemos.PluginTest")
-        if (ctClass == null) {
-            return
-        }
-        if (ctClass.isFrozen()) {
-            ctClass.defrost()
-        }
-        CtMethod ctMethod = ctClass.getDeclaredMethod("init")
-
-        String insetStr = "System.out.println(\"the codes to be insert!\");"
-        ctMethod.insertAfter(insetStr)//在方法末尾插入代码
-        ctClass.writeFile(path)
-        ctClass.detach()//释放
-    }
 }

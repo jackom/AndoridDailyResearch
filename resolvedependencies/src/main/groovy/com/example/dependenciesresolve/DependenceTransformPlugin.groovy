@@ -17,8 +17,12 @@ class DependenceTransformPlugin implements Plugin<Project> {
         DependenceTransformExtension dependenceTransformExtension = target.extensions.create(
                 "DependenceTransform", DependenceTransformExtension)
 
-        target.getExtensions().findByType(BaseExtension.class)
-                .registerTransform(new TestTransform(dependenceTransformExtension))
+        BaseExtension baseExtension = target.getExtensions().findByType(BaseExtension.class)
+
+        baseExtension.registerTransform(new TestTransform(dependenceTransformExtension))
+        baseExtension.registerTransform(new SecondTestTransform(dependenceTransformExtension))
+
+        println "DependenceTransformPlugin execute finish..."
 
 //        def android = target.extensions.getByType(AppExtension)
 //        android.applicationVariants.all { ApplicationVariant variant ->

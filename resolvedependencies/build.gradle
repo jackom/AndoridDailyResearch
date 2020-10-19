@@ -7,7 +7,8 @@ dependencies {
     implementation localGroovy()//groovy sdk
 
     implementation 'com.android.tools.build:gradle:3.6.3'
-    implementation 'org.javassist:javassist:3.27.0-GA'//用于编辑class文件
+    implementation group: 'org.ow2.asm', name: 'asm', version: '7.1'
+    implementation group: 'org.ow2.asm', name: 'asm-commons', version: '7.1'
 }
 
 repositories {
