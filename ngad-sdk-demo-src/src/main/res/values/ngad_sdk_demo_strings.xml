@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ngad_sdk_demo_app_name">NGADemo</string>
+    <string name="ngad_sdk_demo_rating_key">rating:</string>
+    <string name="ngad_sdk_demo_no_rating">no rating</string>
+    <string name="ngad_sdk_demo_receive">accept</string>
+    <string name="ngad_sdk_demo_gift_and_receive">accept gift</string>
+    <string name="ngad_sdk_demo_delete">delete</string>
+    <string name="ngad_sdk_demo_splash_ad">splash ad</string>
+    <string name="ngad_sdk_demo_banner_ad">banner ad</string>
+    <string name="ngad_sdk_demo_video_ad">video ad</string>
+    <string name="ngad_sdk_demo_interstitial_ad">interstitial ad</string>
+    <string name="ngad_sdk_demo_template_ad">template ad</string>
+    <string name="ngad_sdk_demo_native_ad">native ad</string>
+    <string name="ngad_sdk_demo_skip">skip</string>
+    <string name="ngad_sdk_demo_load_ad">load ad</string>
+    <string name="ngad_sdk_demo_show_ad">show ad</string>
+    <string name="ngad_sdk_demo_close_ad">close ad</string>
+    <string name="ngad_sdk_demo_click_ad">click ad</string>
+    <string name="ngad_sdk_demo_destroy_ad">destroy ad</string>
+    <string name="ngad_sdk_demo_has_cache">has cache</string>
+    <string name="ngad_sdk_demo_template_1">template 1</string>
+    <string name="ngad_sdk_demo_template_2">template 2</string>
+
+
+</resources>

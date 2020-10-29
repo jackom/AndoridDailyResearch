@@ -1,3 +1,4 @@
+include ':ngad-sdk-demo-src'
 include ':resolvedependencies'
 include ':buildsrc'
 include ':groovylibtest'

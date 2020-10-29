@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_video_ad_init"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_load_ad"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/btn_video_ad_uninit"
+            android:layout_below="@id/btn_video_ad_init"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_destroy_ad"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/btn_video_ad_has_cache"
+            android:layout_below="@id/btn_video_ad_uninit"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_has_cache"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/btn_video_ad_show"
+            android:layout_below="@id/btn_video_ad_has_cache"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_show_ad"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <RelativeLayout
+            android:id="@+id/nat"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

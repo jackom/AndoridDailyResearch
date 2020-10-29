@@ -1,0 +1,64 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'ngad-sdk-demo'
+            keyPassword '123456'
+            storeFile file('ngad-sdk-demo.keystore')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "cn.sirius.adsdk.demo.aar"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'ngad-sdk-proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
+            buildConfigField "boolean", "CLEAN_MODULES", "true"
+        }
+    }
+}
+
+//指定本地aar文件的存放目录
+repositories {
+    flatDir {
+        dirs'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:23.1.1'
+
+    //编译Demo工程中libs目录下放的aar文件
+    fileTree(dir: 'libs', include: ['*.aar']).each { file ->
+        compile(name: file.name.lastIndexOf('.').with {
+            it != -1 ? file.name[0..<it] : file.name
+        }, ext: 'aar')
+    }
+}

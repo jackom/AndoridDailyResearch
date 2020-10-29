@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/btn_banner_create"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_load_ad"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/btn_banner_destroy"
+            android:layout_below="@id/btn_banner_create"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_destroy_ad"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/btn_banner_show"
+            android:layout_below="@id/btn_banner_destroy"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_show_ad"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/btn_banner_close"
+            android:layout_below="@id/btn_banner_show"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/ngad_sdk_demo_close_ad"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:onClick="onClick" />
+
+        <RelativeLayout
+            android:id="@+id/bannerParent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

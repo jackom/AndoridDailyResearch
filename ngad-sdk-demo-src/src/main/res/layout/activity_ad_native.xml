@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rl_control_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_native_create"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:onClick="onClick"
+                android:text="@string/ngad_sdk_demo_load_ad"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_native_destroy"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/btn_native_create"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:onClick="onClick"
+                android:text="@string/ngad_sdk_demo_destroy_ad"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_native_show"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/btn_native_destroy"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:onClick="onClick"
+                android:text="@string/ngad_sdk_demo_show_ad"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_native_close"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/btn_native_show"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:onClick="onClick"
+                android:text="@string/ngad_sdk_demo_close_ad"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
