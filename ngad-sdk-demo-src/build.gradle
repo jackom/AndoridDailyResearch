@@ -1,9 +1,10 @@
 buildscript {
     repositories {
+        google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:4.1.3'
     }
 }
 
@@ -18,8 +19,8 @@ android {
             storePassword '123456'
         }
     }
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "cn.sirius.adsdk.demo.aar"

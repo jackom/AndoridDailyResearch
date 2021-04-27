@@ -1,0 +1,4 @@
+version=2.7.43
+product=adpsdk
+sdkChannel=9game
+dependent_sdks=nga

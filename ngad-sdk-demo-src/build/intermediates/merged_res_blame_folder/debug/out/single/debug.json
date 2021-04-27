@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_bg_loading_view.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/bg_loading_view.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_activity_splash.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_sdk_init_loading.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/sdk_init_loading.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_activity_video_ad_control.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/activity_video_ad_control.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_title_bar.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/title_bar.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_action_switch_night.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/action_switch_night.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-hdpi_icon.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-hdpi/icon.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_activity_ad_control.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/activity_ad_control.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_list_item.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/list_item.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_button_bg.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/button_bg.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_background_circle.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/background_circle.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_action_back_bt_selected.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/action_back_bt_selected.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_close.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/close.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_button_bg_normal.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/button_bg_normal.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_welcome.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/welcome.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_bg.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/bg.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_native_ad_contaner.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/native_ad_contaner.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_activity_ad_native.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/activity_ad_native.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_button_bg_pressed.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/button_bg_pressed.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_activity_template.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/activity_template.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_share_gradient_write.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/share_gradient_write.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_adp_loading_icon.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/adp_loading_icon.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-hdpi_action_switch_night.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-hdpi/action_switch_night.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/drawable_splash_holder.jpg.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/drawable/splash_holder.jpg"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_adp_layout_splash_ad_template.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/adp_layout_splash_ad_template.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/mipmap-hdpi_action_back_bt_selected.png.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/mipmap-hdpi/action_back_bt_selected.png"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_feed_layout.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/feed_layout.xml"
+    },
+    {
+        "merged": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/build/intermediates/res/merged/debug/layout_loading_view.xml.flat",
+        "source": "/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/res/layout/loading_view.xml"
+    }
+]

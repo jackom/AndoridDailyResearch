@@ -7,7 +7,7 @@ import java.util.concurrent.FutureTask
 /**
  * @author：jackom
  * @date：4/24/21 on 6:49 AM
- * @desc：
+ * @desc：新增FutureTask，实现多个线程同步执行
  */
 
 fun main() {

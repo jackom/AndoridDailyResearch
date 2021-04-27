@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ngad_sdk_demo_app_name">广告示例</string>
+    <string name="ngad_sdk_demo_banner_ad">横幅广告</string>
+    <string name="ngad_sdk_demo_click_ad">点击广告</string>
+    <string name="ngad_sdk_demo_close_ad">关闭广告</string>
+    <string name="ngad_sdk_demo_delete">删除</string>
+    <string name="ngad_sdk_demo_destroy_ad">销毁广告</string>
+    <string name="ngad_sdk_demo_gift_and_receive">领取礼物</string>
+    <string name="ngad_sdk_demo_has_cache">是否有缓存</string>
+    <string name="ngad_sdk_demo_interstitial_ad">插屏广告</string>
+    <string name="ngad_sdk_demo_load_ad">加载广告</string>
+    <string name="ngad_sdk_demo_native_ad">原生广告</string>
+    <string name="ngad_sdk_demo_no_rating">暂无评分</string>
+    <string name="ngad_sdk_demo_rating_key">评分:</string>
+    <string name="ngad_sdk_demo_receive">领取</string>
+    <string name="ngad_sdk_demo_show_ad">展示广告</string>
+    <string name="ngad_sdk_demo_skip">跳过</string>
+    <string name="ngad_sdk_demo_splash_ad">开屏广告</string>
+    <string name="ngad_sdk_demo_template_1">模版1</string>
+    <string name="ngad_sdk_demo_template_2">模板2</string>
+    <string name="ngad_sdk_demo_template_ad">模板广告</string>
+    <string name="ngad_sdk_demo_video_ad">视频广告</string>
+</resources>

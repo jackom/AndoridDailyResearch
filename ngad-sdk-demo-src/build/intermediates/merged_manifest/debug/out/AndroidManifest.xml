@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.sirius.adsdk.demo.aar"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <!-- SDK 权限 -->
+    <!--
+如果您打包App时的targetSdkVersion >= 23：请在先获取到SDK要求的所有权限，然后再调用SDK的广告接口。否则NGASDK将无法工作，我们建议您在App启动时就去获取广点通SDK需要的权限，GDTUnionDemo工程中的SplashActivity也提供了基本的权限处理示例代码供开发者参考。
+
+如果您打包App时的targetSdkVersion >= 24：除了需要处理好权限申请以外，还需要处理好文件访问的兼容性，详细说明见本文档第6章的注意事项。
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:label="@string/ngad_sdk_demo_app_name"
+        android:supportsRtl="true" >
+        <activity
+            android:name="cn.sirius.adsdk.demo.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.sirius.adsdk.demo.BannerActivity"
+            android:configChanges="orientation|keyboard|screenSize" >
+        </activity>
+        <activity
+            android:name="cn.sirius.adsdk.demo.InsertActivity"
+            android:configChanges="orientation|keyboard|screenSize" >
+        </activity>
+        <activity
+            android:name="cn.sirius.adsdk.demo.VideoActivity"
+            android:configChanges="orientation|keyboard|screenSize" >
+        </activity>
+        <activity
+            android:name="cn.sirius.adsdk.demo.WelcomeActivity"
+            android:label="@string/ngad_sdk_demo_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.sirius.adsdk.demo.TemplateActivity"
+            android:configChanges="orientation|keyboard|screenSize" />
+        <activity
+            android:name="cn.sirius.adsdk.demo.NativeAdActivity"
+            android:configChanges="orientation|keyboard|screenSize" />
+        <activity
+            android:name="cn.sirius.nga.activity.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="cn.uc.gamesdk.sdkweb" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="cn.sirius.nga.provider.NgaFileProvider"
+            android:authorities="cn.sirius.adsdk.demo.aar.nga.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/adp_file_path" />
+        </provider>
+
+        <activity
+            android:name="cn.sirius.nga.activity.ProxyActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>

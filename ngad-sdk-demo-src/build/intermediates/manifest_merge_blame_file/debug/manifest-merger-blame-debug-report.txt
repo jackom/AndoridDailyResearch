@@ -1,0 +1,180 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="cn.sirius.adsdk.demo.aar"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:25:5-27:41
+8        android:minSdkVersion="14"
+8-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:26:9-35
+9        android:targetSdkVersion="23" />
+9-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:27:9-38
+10
+11    <!-- SDK 权限 -->
+12    <!--
+13如果您打包App时的targetSdkVersion >= 23：请在先获取到SDK要求的所有权限，然后再调用SDK的广告接口。否则NGASDK将无法工作，我们建议您在App启动时就去获取广点通SDK需要的权限，GDTUnionDemo工程中的SplashActivity也提供了基本的权限处理示例代码供开发者参考。
+14
+15如果您打包App时的targetSdkVersion >= 24：除了需要处理好权限申请以外，还需要处理好文件访问的兼容性，详细说明见本文档第6章的注意事项。
+16    -->
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:10:5-67
+17-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:10:22-64
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:11:5-79
+18-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:11:22-76
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:12:5-76
+19-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:12:22-73
+20    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+20-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:13:5-75
+20-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:13:22-72
+21    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+21-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:14:5-81
+21-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:14:22-78
+22    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+22-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:15:5-79
+22-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:15:22-76
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+23-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:17:5-81
+23-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:17:22-78
+24    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+24-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:18:5-73
+24-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:18:22-70
+25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+25-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:19:5-80
+25-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:19:22-77
+26    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+26-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:20:5-76
+26-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:20:22-73
+27    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+27-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:22:5-83
+27-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:22:22-80
+28
+29    <application
+29-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:29:5-87:19
+30        android:allowBackup="true"
+30-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:30:9-35
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.0.0] /Users/jackom/.gradle/caches/transforms-2/files-2.1/618bc4bd15d3f915767aa924c2550897/core-1.0.0/AndroidManifest.xml:22:18-86
+32        android:debuggable="true"
+33        android:label="@string/ngad_sdk_demo_app_name"
+33-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:32:9-55
+34        android:supportsRtl="true" >
+34-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:33:9-35
+35        <activity
+35-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:35:9-39:20
+36            android:name="cn.sirius.adsdk.demo.MainActivity"
+36-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:36:13-41
+37            android:configChanges="keyboardHidden|orientation"
+37-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:38:13-63
+38            android:screenOrientation="portrait" >
+38-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:37:13-49
+39        </activity>
+40        <activity
+40-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:41:9-44:20
+41            android:name="cn.sirius.adsdk.demo.BannerActivity"
+41-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:42:13-43
+42            android:configChanges="orientation|keyboard|screenSize" >
+42-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:43:13-68
+43        </activity>
+44        <activity
+44-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:46:9-49:20
+45            android:name="cn.sirius.adsdk.demo.InsertActivity"
+45-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:47:13-43
+46            android:configChanges="orientation|keyboard|screenSize" >
+46-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:48:13-68
+47        </activity>
+48        <activity
+48-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:51:9-54:20
+49            android:name="cn.sirius.adsdk.demo.VideoActivity"
+49-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:52:13-42
+50            android:configChanges="orientation|keyboard|screenSize" >
+50-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:53:13-68
+51        </activity>
+52        <activity
+52-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:56:9-65:20
+53            android:name="cn.sirius.adsdk.demo.WelcomeActivity"
+53-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:57:13-44
+54            android:label="@string/ngad_sdk_demo_app_name"
+54-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:59:13-59
+55            android:screenOrientation="portrait"
+55-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:58:13-49
+56            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+56-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:60:13-71
+57            <intent-filter>
+57-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:61:13-64:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:62:17-69
+58-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:62:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:63:17-77
+60-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:63:27-74
+61            </intent-filter>
+62        </activity>
+63        <activity
+63-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:66:9-68:70
+64            android:name="cn.sirius.adsdk.demo.TemplateActivity"
+64-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:67:13-45
+65            android:configChanges="orientation|keyboard|screenSize" />
+65-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:68:13-68
+66        <activity
+66-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:69:9-71:70
+67            android:name="cn.sirius.adsdk.demo.NativeAdActivity"
+67-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:70:13-45
+68            android:configChanges="orientation|keyboard|screenSize" />
+68-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:71:13-68
+69        <activity
+69-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:75:9-85:20
+70            android:name="cn.sirius.nga.activity.AdActivity"
+70-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:77:13-61
+71            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+71-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:78:13-83
+72            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+72-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:79:13-72
+73            android:windowSoftInputMode="adjustResize" >
+73-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:80:13-55
+74            <intent-filter>
+74-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:81:13-84:29
+75                <action android:name="cn.uc.gamesdk.sdkweb" />
+75-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:82:17-63
+75-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:82:25-60
+76
+77                <category android:name="android.intent.category.DEFAULT" />
+77-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:83:17-76
+77-->/Users/jackom/AndroidProjects/AndoridDailyResearch/ngad-sdk-demo-src/src/main/AndroidManifest.xml:83:27-73
+78            </intent-filter>
+79        </activity>
+80
+81        <provider
+81-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:11:5-13:16
+82            android:name="cn.sirius.nga.provider.NgaFileProvider"
+82-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:11:15-68
+83            android:authorities="cn.sirius.adsdk.demo.aar.nga.fileprovider"
+83-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:11:129-184
+84            android:exported="false"
+84-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:11:104-128
+85            android:grantUriPermissions="true" >
+85-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:11:69-103
+86            <meta-data
+86-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:12:7-108
+87                android:name="android.support.FILE_PROVIDER_PATHS"
+87-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:12:18-68
+88                android:resource="@xml/adp_file_path" />
+88-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:12:69-106
+89        </provider>
+90
+91        <activity
+91-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:14:5-242
+92            android:name="cn.sirius.nga.activity.ProxyActivity"
+92-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:14:58-109
+93            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+93-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:14:110-180
+94            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+94-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:14:181-240
+95            android:windowSoftInputMode="adjustResize" />
+95-->[:ngad-sdk-release-2.7.43:] /Users/jackom/.gradle/caches/transforms-2/files-2.1/f4468ac183608f30c6429d32c23e6d3b/jetified-ngad-sdk-release-2.7.43/AndroidManifest.xml:14:15-57
+96    </application>
+97
+98</manifest>
